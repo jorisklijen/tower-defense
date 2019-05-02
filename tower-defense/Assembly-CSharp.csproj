@@ -63,6 +63,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\enemys\movetomuse.cs" />
+    <Compile Include="Assets\Scripts\enemys\Spawner.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>D:/main D/github/tower-defense/tower-defense/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
