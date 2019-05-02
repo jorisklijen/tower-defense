@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// Geschreven door Joris de Kleijn [...-5-2019 ...:...] 
+/// Geschreven door Joris de Kleijn [2-5-2019 19:00] 
 /// </summary>
 
 public class Spawner : MonoBehaviour
@@ -15,13 +15,13 @@ public class Spawner : MonoBehaviour
     public float tijdTusenWaves = 5f;
     private float countdown = 6f;//--------------------------------------------------- de tijd voor dat de eerste wave komt
     [Space]
-    private int waveNumber = 1;
+    private int waveIndex = 0;
 
     void Update()
     {
         if (countdown <= 0f)
         {
-            SpawnWave();
+            StartCoroutine(SpawnWave());
             countdown = tijdTusenWaves;
         }
 
@@ -31,13 +31,17 @@ public class Spawner : MonoBehaviour
 
 
     /// <summary>
-    /// zorgt dat er een nieuwe groep vijhanden aankomen 
+    /// corotine zorgt dat er een nieuwe groep vijhanden aankomen maar ze wel allemaal na elkaar spawnen
     /// </summary>
-    void SpawnWave ()
+    IEnumerator SpawnWave ()
     {
-        for (int i = 0; i < waveNumber; i++)
+        waveIndex++;
+        for (int i = 0; i < waveIndex; i++)
+        {
             SpawnEnemy();
-        waveNumber++;
+            yield return new WaitForSeconds(0.2f);//----------------------------------- hier staat de tijd voor de induvuliwwele spawns van de enemys NIET DE SPAWNS VAN WAVES 
+        }
+        
     }
 
     /// <summary>

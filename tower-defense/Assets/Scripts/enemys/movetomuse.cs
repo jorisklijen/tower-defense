@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI;//--------------------------------------------------- nodig voor navmesh scripting;
+using UnityEngine.AI;//--------------------------------------------------- nodig voor navmesh scripting
 
 /// <summary>
 /// Geschreven door Joris de Kleijn [2-5-2019 12:00] 
