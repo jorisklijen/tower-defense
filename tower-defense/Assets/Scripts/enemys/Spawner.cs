@@ -15,7 +15,7 @@ public class Spawner : MonoBehaviour
     public float tijdTusenWaves = 5f;
     private float countdown = 6f;//--------------------------------------------------- de tijd voor dat de eerste wave komt
     [Space]
-    private int waveIndex = 0;
+    private int waveIndex = 0; 
 
     void Update()
     {
