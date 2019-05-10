@@ -10,6 +10,7 @@ using UnityEngine.AI;//--------------------------------------------------- nodig
 public class movetomuse : MonoBehaviour
 {
     // public Camera cam;
+    
     public NavMeshAgent agent;
     [Space]  //----------------------------------------------------------- in editor zo dat er een space tussen zit :)
     public Transform target;
@@ -17,7 +18,7 @@ public class movetomuse : MonoBehaviour
     void Update()
     {
         agent.SetDestination(target.position);
-
+        
         //----------------------------------[ Bewoog de enemy naar de muis klik ]-----------------------------------
         //                                                                                                         |
         //   if (Input.GetMouseButtonDown(0))                                                                      |

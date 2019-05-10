@@ -40,7 +40,7 @@ public class Spawner : MonoBehaviour
     {
         waveIndex++;
         for (int i = 0; i < waveIndex; i++)
-        {s
+        {
             SpawnEnemy();
             yield return new WaitForSeconds(tijdTuusenEnemys);
         }
