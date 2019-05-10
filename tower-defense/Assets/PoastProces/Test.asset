@@ -45,7 +45,7 @@ MonoBehaviour:
     value: 0
   radius:
     overrideState: 1
-    value: 0.18
+    value: 0.25
   quality:
     overrideState: 1
     value: 4
@@ -219,7 +219,7 @@ MonoBehaviour:
     value: 100
   lift:
     overrideState: 1
-    value: {x: 0.93304694, y: 0.9289813, z: 1, w: 0}
+    value: {x: 0.9569888, y: 0.95630026, z: 1, w: 0}
   gamma:
     overrideState: 1
     value: {x: 1, y: 1, z: 1, w: 0}
@@ -1499,19 +1499,19 @@ MonoBehaviour:
     overrideState: 1
     value: 0.612
   clamp:
-    overrideState: 1
+    overrideState: 0
     value: 65472
   diffusion:
-    overrideState: 1
+    overrideState: 0
     value: 7
   anamorphicRatio:
-    overrideState: 1
+    overrideState: 0
     value: 0.08
   color:
-    overrideState: 1
+    overrideState: 0
     value: {r: 1, g: 1, b: 1, a: 1}
   fastMode:
-    overrideState: 1
+    overrideState: 0
     value: 1
   dirtTexture:
     overrideState: 0
