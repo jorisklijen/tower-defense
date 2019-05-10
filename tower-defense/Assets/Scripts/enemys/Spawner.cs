@@ -13,8 +13,10 @@ public class Spawner : MonoBehaviour
     public Transform spawnPoint;
     [Space]
     public float tijdTusenWaves = 5f;
+    public float tijdTuusenEnemys = 0.5f;
     // De tijd voor dat de eerste wave komt
     public float countdown = 6f;
+
     [Space]
     private int waveIndex = 0; 
 
@@ -38,9 +40,9 @@ public class Spawner : MonoBehaviour
     {
         waveIndex++;
         for (int i = 0; i < waveIndex; i++)
-        {
+        {s
             SpawnEnemy();
-            yield return new WaitForSeconds(0.2f);//----------------------------------- hier staat de tijd voor de induvuliwwele spawns van de enemys NIET DE SPAWNS VAN WAVES 
+            yield return new WaitForSeconds(tijdTuusenEnemys);
         }
         
     }
