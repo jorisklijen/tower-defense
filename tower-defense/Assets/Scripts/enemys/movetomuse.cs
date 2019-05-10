@@ -14,7 +14,7 @@ public class movetomuse : MonoBehaviour
     public NavMeshAgent agent;
     [Space]  //----------------------------------------------------------- in editor zo dat er een space tussen zit :)
     public Transform target;
-
+    
     void Update()
     {
         agent.SetDestination(target.position);
