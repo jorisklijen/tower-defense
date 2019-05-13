@@ -2,25 +2,26 @@
 
 public class NodeScript : MonoBehaviour
 {
-    public Color hoverColor;
-    public Color normalColor;
+    public Material hoverColor;
+    public Material normalColor;
 
     private Renderer rend;
 
     private void Start()
     {
         rend = GetComponent<Renderer>();
+        rend.material = normalColor;
     }
 
     private void OnMouseEnter()
     {
-        rend.material.SetColor("_Color", hoverColor);
-        Debug.Log("Mouse Enter");
+        rend.material = hoverColor;
+        //Debug.Log("Mouse Enter");
     }
 
     private void OnMouseExit()
     {
-        rend.material.SetColor("_Color", normalColor);
-        Debug.Log("Mouse Exit");
+        rend.material = normalColor;
+        //Debug.Log("Mouse Exit");
     }
 }
