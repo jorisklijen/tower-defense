@@ -11,7 +11,11 @@ NavMeshProjectSettings:
     cost: 1
   - name: Jump
     cost: 2
-  - name: 
+  - name: buggie
+    cost: 1
+  - name: thank
+    cost: 1
+  - name: boss
     cost: 1
   - name: 
     cost: 1
@@ -45,7 +49,11 @@ NavMeshProjectSettings:
     cost: 1
   - name: 
     cost: 1
+  - name: brug
+    cost: 2
   - name: 
+    cost: 1
+  - name: heli
     cost: 1
   - name: 
     cost: 1
@@ -59,16 +67,8 @@ NavMeshProjectSettings:
     cost: 1
   - name: 
     cost: 1
-  - name: 
-    cost: 1
-  - name: 
-    cost: 1
-  - name: 
-    cost: 1
-  - name: 
-    cost: 1
-  - name: 
-    cost: 1
+  - name: ravijn
+    cost: 2
   m_LastAgentTypeID: -334000983
   m_Settings:
   - serializedVersion: 2
@@ -91,8 +91,8 @@ NavMeshProjectSettings:
     agentTypeID: -334000983
     agentRadius: 1
     agentHeight: 2
-    agentSlope: 20
-    agentClimb: 0.5
+    agentSlope: 60
+    agentClimb: 2
     ledgeDropHeight: 0
     maxJumpAcrossDistance: 0
     minRegionArea: 2
@@ -105,4 +105,4 @@ NavMeshProjectSettings:
       m_Flags: 0
   m_SettingNames:
   - Humanoid
-  - Enemy
+  - heli
