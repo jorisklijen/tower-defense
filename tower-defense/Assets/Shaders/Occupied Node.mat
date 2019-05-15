@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Normal Node
+  m_Name: Occupied Node
   m_Shader: {fileID: -6465566751694194690, guid: 90a1d450b837921458c4a58fb4632a90,
     type: 3}
   m_ShaderKeywords: 
@@ -21,10 +21,10 @@ Material:
     serializedVersion: 3
     m_TexEnvs: []
     m_Floats:
-    - Vector1_763D62B1: 3.39
+    - Vector1_763D62B1: 0.96
     - Vector1_81CFC84D: 0.44
     - Vector1_EA7EB235: 1
     - Vector1_F54FB5A6: 0
     m_Colors:
-    - Color_5CC131: {r: 0, g: 0.34900808, b: 0.5377358, a: 1}
+    - Color_5CC131: {r: 3.2784314, g: 0.14117648, b: 0.17254902, a: 1}
     - Color_ACE15ED7: {r: 0, g: 16.188803, b: 12.379673, a: 1}
