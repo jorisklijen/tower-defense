@@ -94,7 +94,7 @@ MonoBehaviour:
   hoverColor: {fileID: 2100000, guid: 765336df339c61041927d233a0af8801, type: 2}
   normalColor: {fileID: 2100000, guid: 72763311f621a3d40904fd3118451dcb, type: 2}
   occupiedColor: {fileID: 2100000, guid: cac21b6ccc3b5114097c3168550d357a, type: 2}
-  offset: {x: 0, y: -0.5, z: 0}
+  offset: {x: 0, y: 5, z: 0}
   turretPlacementSource: {fileID: 7320977837852204755, guid: 93b289feff95d6c4f9474d3d40732854,
     type: 3}
 --- !u!65 &4991375423172670205
