@@ -9448,7 +9448,7 @@ MonoBehaviour:
   enemy: {fileID: 3809774183317962716, guid: 08dc1a4dd5584984aa435438a03202a4, type: 3}
   spawnPoint: {fileID: 721482003}
   tijdTusenWaves: 3
-  tijdTuusenEnemys: 0
+  tijdTuusenEnemys: 0.5
   countdown: 6
 --- !u!1001 &1740112597
 PrefabInstance:
@@ -9517,22 +9517,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 657100445184483576, guid: ef4920628f0acc54c98efd5b18989732,
+    - target: {fileID: 6039854062356266671, guid: ef4920628f0acc54c98efd5b18989732,
         type: 3}
       propertyPath: m_Size.x
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 657100445184483576, guid: ef4920628f0acc54c98efd5b18989732,
+    - target: {fileID: 6039854062356266671, guid: ef4920628f0acc54c98efd5b18989732,
         type: 3}
       propertyPath: m_Size.z
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 6039854062356266671, guid: ef4920628f0acc54c98efd5b18989732,
+    - target: {fileID: 657100445184483576, guid: ef4920628f0acc54c98efd5b18989732,
         type: 3}
       propertyPath: m_Size.x
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 6039854062356266671, guid: ef4920628f0acc54c98efd5b18989732,
+    - target: {fileID: 657100445184483576, guid: ef4920628f0acc54c98efd5b18989732,
         type: 3}
       propertyPath: m_Size.z
       value: 1
@@ -11116,6 +11116,11 @@ PrefabInstance:
       propertyPath: far clip plane
       value: 300
       objectReference: {fileID: 0}
+    - target: {fileID: 6698935976907648083, guid: 36f77c0afddbd9e4192761b3c16e359f,
+        type: 3}
+      propertyPath: m_Depth
+      value: -100
+      objectReference: {fileID: 0}
     - target: {fileID: 6698935977472032544, guid: 36f77c0afddbd9e4192761b3c16e359f,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -11724,6 +11729,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7189816679156204551, guid: f1e0985d4d2b2804d87ca0b2148dc18a,
+        type: 3}
+      propertyPath: m_Name
+      value: point vorenemy
+      objectReference: {fileID: 0}
     - target: {fileID: 3781199559955076910, guid: f1e0985d4d2b2804d87ca0b2148dc18a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11778,11 +11788,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7189816679156204551, guid: f1e0985d4d2b2804d87ca0b2148dc18a,
-        type: 3}
-      propertyPath: m_Name
-      value: point vorenemy
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1e0985d4d2b2804d87ca0b2148dc18a, type: 3}
