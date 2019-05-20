@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3203523759009091468
+--- !u!1 &53772965051420093
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,47 +8,46 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 741577473426661830}
-  - component: {fileID: 9127357101734379709}
-  - component: {fileID: 843351268598618756}
-  - component: {fileID: 8404004862726971252}
-  - component: {fileID: 4991375423172670205}
+  - component: {fileID: 2926033991375580085}
+  - component: {fileID: 7511666906457043167}
+  - component: {fileID: 5505522378798867477}
+  - component: {fileID: 8460196528945756866}
   m_Layer: 0
-  m_Name: Node (0)
+  m_Name: Bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 1
+  m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &741577473426661830
+--- !u!4 &2926033991375580085
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3203523759009091468}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.9, z: 0}
-  m_LocalScale: {x: 15, y: 3, z: 15}
+  m_GameObject: {fileID: 53772965051420093}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -48.980103, y: 15.8, z: -13.6296425}
+  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &9127357101734379709
+--- !u!33 &7511666906457043167
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3203523759009091468}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &843351268598618756
+  m_GameObject: {fileID: 53772965051420093}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &5505522378798867477
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3203523759009091468}
+  m_GameObject: {fileID: 53772965051420093}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 1
@@ -59,7 +58,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 25986d244d7565f42aa317da68f0c7ba, type: 2}
+  - {fileID: 2100000, guid: 5dde15a42e4ff2547b95b1d057262c45, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -79,34 +78,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &8404004862726971252
+--- !u!114 &8460196528945756866
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3203523759009091468}
+  m_GameObject: {fileID: 53772965051420093}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c0356c3343155d4e974a9e77098645a, type: 3}
+  m_Script: {fileID: 11500000, guid: 8b44a32036564ac4b8cc47d5ca9a0c9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {fileID: 2100000, guid: 765336df339c61041927d233a0af8801, type: 2}
-  normalColor: {fileID: 2100000, guid: 72763311f621a3d40904fd3118451dcb, type: 2}
-  occupiedColor: {fileID: 2100000, guid: cac21b6ccc3b5114097c3168550d357a, type: 2}
-  offset: {x: 0, y: -1.5, z: 0}
-  turretPlacementSource: {fileID: 7131236120999624905, guid: b35949efa300f3d47be3de1e0572e3de,
-    type: 3}
---- !u!65 &4991375423172670205
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3203523759009091468}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  speed: 100
