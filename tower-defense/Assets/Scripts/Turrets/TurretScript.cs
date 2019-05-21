@@ -1,17 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class TurretScript : MonoBehaviour
 {
+    private Transform target;
     [Header("Unity setup fields")]
 
-    private Transform target;
     public string enemyTag = "Enemy";
     public Transform partToRotate;
 
     public GameObject bulletPrefab;
     public Transform firePoint;
+    public GameObject muzzleFlash;
+
+    public AudioSource GunAudioSource;
 
     [Space]
     [Header("Atributes")]
@@ -20,11 +24,19 @@ public class TurretScript : MonoBehaviour
     private float fireContDown = 0f;
     public float range = 15f;
     public float rotateSpeed = 10f;
+    [SerializeField] public static int turretDamage = 1;
+
+    [Space]
+    [Header("Upgrades")]
+
+    public int upgradeCosts;
+    public GameObject nextTierTurret;
 
     // Start is called before the first frame update
     void Start()
     {
         InvokeRepeating("UpdateTarget", 0f, 0.5f);
+        turretDamage = turretDamage * 10;
     }
 
     void UpdateTarget()
@@ -85,11 +97,21 @@ public class TurretScript : MonoBehaviour
         {
             bullet.Seek(target);
         }
+        GameObject MuzzleFlash = (GameObject)Instantiate(muzzleFlash, firePoint.position, firePoint.rotation);
+        Destroy(MuzzleFlash, .1f);
+        GunAudioSource.Play();
     }
 
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, range);
+    }
+
+
+    private void OnMouseDown()
+    {
+        Instantiate(nextTierTurret, transform.position, transform.rotation);
+        Destroy(gameObject);
     }
 }

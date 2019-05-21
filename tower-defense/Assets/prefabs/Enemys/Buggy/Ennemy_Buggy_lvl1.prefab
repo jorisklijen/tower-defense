@@ -82,7 +82,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f003b3500548e97418f5fefbc5880f50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 3
+  Health: 2
 --- !u!1001 &8742477424325568067
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -90,6 +90,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8742477424197347132}
     m_Modifications:
+    - target: {fileID: 100000, guid: b7d3ea14f798b45309e64cbf222d83ad, type: 3}
+      propertyPath: m_Name
+      value: Buggy
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b7d3ea14f798b45309e64cbf222d83ad, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -133,10 +137,6 @@ PrefabInstance:
     - target: {fileID: 400000, guid: b7d3ea14f798b45309e64cbf222d83ad, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: b7d3ea14f798b45309e64cbf222d83ad, type: 3}
-      propertyPath: m_Name
-      value: Buggy
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: b7d3ea14f798b45309e64cbf222d83ad, type: 3}
       propertyPath: m_Materials.Array.data[0]

@@ -50,9 +50,16 @@ MonoBehaviour:
   bulletPrefab: {fileID: 53772965051420093, guid: 2d3a92708fe74f54dbc4a329f2d17132,
     type: 3}
   firePoint: {fileID: 7009501958401473968}
+  muzzleFlash: {fileID: 344619686548298833, guid: 406555e1421a95f46b44738e7e1ced35,
+    type: 3}
+  GunAudioSource: {fileID: 6042664621924877631, guid: 5d2a8e24e2fb97c4e894234e3acf3130,
+    type: 3}
   fireRate: 10
   range: 60
   rotateSpeed: 15
+  upgradeCosts: 0
+  nextTierTurret: {fileID: 5056841637414792988, guid: b9e36898ce444ce4fafc4b8c47b3b119,
+    type: 3}
 --- !u!1 &292610575966551494
 GameObject:
   m_ObjectHideFlags: 0

@@ -50,9 +50,14 @@ MonoBehaviour:
   bulletPrefab: {fileID: 53772965051420093, guid: 2d3a92708fe74f54dbc4a329f2d17132,
     type: 3}
   firePoint: {fileID: 8114706529167929836}
+  muzzleFlash: {fileID: 344619686548298833, guid: 406555e1421a95f46b44738e7e1ced35,
+    type: 3}
+  GunAudioSource: {fileID: 6042664621924877631, guid: 5d2a8e24e2fb97c4e894234e3acf3130,
+    type: 3}
   fireRate: 20
   range: 80
   rotateSpeed: 20
+  turretDamage: 3
 --- !u!1 &6076196202942743520
 GameObject:
   m_ObjectHideFlags: 0

@@ -6,6 +6,8 @@ public class BulletScript : MonoBehaviour
 
     public float speed = 100f;
 
+    public GameObject impactEffect;
+
     public void Seek(Transform _target)
     {
         target = _target;
@@ -25,15 +27,24 @@ public class BulletScript : MonoBehaviour
 
         if(dir.magnitude <= distanceThisFrame)
         {
-            HitTarget();
+            HitTarget(target);
             return;
         }
 
         transform.Translate(dir.normalized * distanceThisFrame, Space.World);
+        transform.LookAt(target);
     }
 
-    void HitTarget()
+    void HitTarget(Transform enemy)
     {
-        Destroy(target.gameObject);
+        GameObject EffectIns = (GameObject)Instantiate(impactEffect, transform.position, transform.rotation);
+        Destroy(EffectIns, 1f);
+
+        EnemyBehavourScript e = enemy.GetComponent<EnemyBehavourScript>();
+        if(e != null)
+        {
+            e.GetShot(TurretScript.turretDamage);
+        }
+
     }
 }
