@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3732067601291818799}
   m_Layer: 0
   m_Name: Ennemy_Buggy_lvl1
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -68,7 +68,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   agent: {fileID: 1082561704226521348}
-  target: {fileID: 2168584930875183830, guid: 68dd9cf41634f96468845c1b62d6411c, type: 3}
+  target: {fileID: 3781199559955076910, guid: f1e0985d4d2b2804d87ca0b2148dc18a, type: 3}
 --- !u!1001 &8742477424325568067
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -76,10 +76,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8742477424197347132}
     m_Modifications:
-    - target: {fileID: 100000, guid: b7d3ea14f798b45309e64cbf222d83ad, type: 3}
-      propertyPath: m_Name
-      value: Buggy
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b7d3ea14f798b45309e64cbf222d83ad, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -123,6 +119,10 @@ PrefabInstance:
     - target: {fileID: 400000, guid: b7d3ea14f798b45309e64cbf222d83ad, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b7d3ea14f798b45309e64cbf222d83ad, type: 3}
+      propertyPath: m_Name
+      value: Buggy
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: b7d3ea14f798b45309e64cbf222d83ad, type: 3}
       propertyPath: m_Materials.Array.data[0]
