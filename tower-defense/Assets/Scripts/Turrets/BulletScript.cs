@@ -34,11 +34,6 @@ public class BulletScript : MonoBehaviour
 
     void HitTarget()
     {
-        //Debug.Log("we've hit something!");
-        Destroy(gameObject);
-
-        //_________________________________________
         Destroy(target.gameObject);
-
     }
 }

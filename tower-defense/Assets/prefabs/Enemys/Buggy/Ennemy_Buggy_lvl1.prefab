@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8742477424197347132}
   - component: {fileID: 1082561704226521348}
   - component: {fileID: 3732067601291818799}
+  - component: {fileID: -740827261355333593}
   m_Layer: 0
   m_Name: Ennemy_Buggy_lvl1
   m_TagString: Enemy
@@ -69,6 +70,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agent: {fileID: 1082561704226521348}
   target: {fileID: 3781199559955076910, guid: f1e0985d4d2b2804d87ca0b2148dc18a, type: 3}
+--- !u!114 &-740827261355333593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8742477424197347133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f003b3500548e97418f5fefbc5880f50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 3
 --- !u!1001 &8742477424325568067
 PrefabInstance:
   m_ObjectHideFlags: 0

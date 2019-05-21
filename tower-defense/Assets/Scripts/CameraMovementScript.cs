@@ -9,19 +9,19 @@ public class CameraMovementScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.W) /*|| Input.mousePosition.y >= Screen.height - panBorderThickness*/)
+        if (Input.GetKey(KeyCode.W))
         {
             transform.Translate(Vector3.forward * panSpeed * Time.deltaTime, Space.World);
         }
-        if (Input.GetKey(KeyCode.S)/* || Input.mousePosition.y <= Screen.height - panBorderThickness*/)
+        if (Input.GetKey(KeyCode.S))
         {
             transform.Translate(Vector3.back * panSpeed * Time.deltaTime, Space.World);
         }
-        if (Input.GetKey(KeyCode.A)/* || Input.mousePosition.x <= Screen.width - panBorderThickness*/)
+        if (Input.GetKey(KeyCode.A))
         {
             transform.Translate(Vector3.left * panSpeed * Time.deltaTime, Space.World);
         }
-        if (Input.GetKey(KeyCode.D)/* || Input.mousePosition.x >= Screen.width - panBorderThickness*/)
+        if (Input.GetKey(KeyCode.D))
         {
             transform.Translate(Vector3.right * panSpeed * Time.deltaTime, Space.World);
         }

@@ -25,9 +25,12 @@ public class NodeScript : MonoBehaviour
     {
         //build a turret
         if(turret != null) Debug.Log("Can't build here");
-        GameObject turretToBuild = BuildManager.instance.GetBuildTurretToBuild();
-        turret = (GameObject)Instantiate(turretToBuild, transform.position + offset, transform.rotation);
-        turretPlacementSource.Play();
+        if (turret == null)
+        {
+            GameObject turretToBuild = BuildManager.instance.GetBuildTurretToBuild();
+            turret = (GameObject)Instantiate(turretToBuild, transform.position + offset, transform.rotation);
+            turretPlacementSource.Play();
+        }
     }
 
     private void OnMouseEnter()
