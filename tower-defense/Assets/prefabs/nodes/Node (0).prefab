@@ -95,7 +95,7 @@ MonoBehaviour:
   normalColor: {fileID: 2100000, guid: 72763311f621a3d40904fd3118451dcb, type: 2}
   occupiedColor: {fileID: 2100000, guid: cac21b6ccc3b5114097c3168550d357a, type: 2}
   offset: {x: 0, y: -1.5, z: 0}
-  turretPlacementSource: {fileID: 7131236120999624905, guid: b35949efa300f3d47be3de1e0572e3de,
+  turretPlacementSource: {fileID: 3923173044185870505, guid: f7ecc1b479f06694abe77b6edd0b227b,
     type: 3}
 --- !u!65 &4991375423172670205
 BoxCollider:

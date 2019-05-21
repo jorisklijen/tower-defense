@@ -12929,7 +12929,7 @@ PrefabInstance:
     - target: {fileID: 6698935976907648085, guid: 36f77c0afddbd9e4192761b3c16e359f,
         type: 3}
       propertyPath: m_Name
-      value: Main Camera
+      value: Main Camera (CLAMP X  -50 tot 90)
       objectReference: {fileID: 0}
     - target: {fileID: 6698935976907648082, guid: 36f77c0afddbd9e4192761b3c16e359f,
         type: 3}
