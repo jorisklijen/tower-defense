@@ -46,7 +46,7 @@ public class WaveSpawner : MonoBehaviour
         }
     }
 
-   /* IEnumerator SpawnWave(Wave _wave)
+    IEnumerator SpawnWave (Wave _wave)
     {
         State = SpawnState.Spawning;
 
@@ -55,7 +55,7 @@ public class WaveSpawner : MonoBehaviour
 
     }
 
-    */
+    
 
 
 }
