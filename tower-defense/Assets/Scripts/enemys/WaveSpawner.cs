@@ -22,6 +22,9 @@ public class WaveSpawner : MonoBehaviour
     public float timeBetweenWaves = 5f;
     public float waveCountdown;
 
+
+    private float searchCountdown = 1f;
+
     private SpawnState State = SpawnState.Counting;
 
     // Start is called before the first frame update
@@ -33,11 +36,25 @@ public class WaveSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(State == SpawnState.Waitng)
+        {
+            //kijk of er nog levende enemys zijn    <---hier war ook de knop voor voldende wave
+
+            if (!EnemyIsAlive())
+            {
+                //begin new round
+
+
+            }
+        }
+
+
         if (waveCountdown <= 0)
         {
             if (State != SpawnState.Spawning)
             {
                 // spawn wave hier 
+                StartCoroutine(SpawnWave(waves[nextWave]));
             }
         }
         else
@@ -46,16 +63,110 @@ public class WaveSpawner : MonoBehaviour
         }
     }
 
-    IEnumerator SpawnWave (Wave _wave)
+    bool EnemyIsAlive()
+    {
+        searchCountdown -= Time.deltaTime;
+        if(searchCountdown <= 0f)
+        {
+            if (GameObject.FindGameObjectWithTag("Enemy") == null)
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    IEnumerator SpawnWave(Wave _wave)
     {
         State = SpawnState.Spawning;
 
         //spawn
+        for (int i = 0; i < _wave.count; i++)
+        {
+            SpawnEnemy(_wave.enemy);
+            yield return new WaitForSeconds(1f / _wave.rate);
+        }
+
+        State = SpawnState.Waitng;
+
+        yield break;
+    }
+    
+    void SpawnEnemy(Transform _enemy)
+    {
+        //spawnenemy
+        Debug.Log("Spawning enemy" + _enemy.name);
 
 
     }
-
     
 
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*                                                                                                                                                                                                 
+                                                                 ohhhhhhhho                                               +hhhhhhhhs                                                                    
+                                                                 dMMMMMMMMh                                               yMMMMMMMMm                                                                    
+                                                                 dMMMMMMMMh                                               yMMMMMMMMm                                                                    
+                                                                 dMMMMMMMMh                                               yMMMMMMMMm                                                                    
+                                                                 hNNNNNNMMh`````````                             `````````yMMNNNNNNd                                                                    
+                                                                          /MMMMMMMMM:                           -MMMMMMMMM+                                                                             
+                                                                          :MMMMMMMMM:                           -MMMMMMMMM/                                                                             
+                                                                          :MMMMMMMMM:                           -MMMMMMMMM/                                                                             
+                                                                          :MMMMMMMMM:                           -MMMMMMMMM/                                                                             
+                                                                 -::::::::oMMMMMMMMMo:::::::::::::::::::::::::::+MMMMMMMMMs::::::::-                                                                    
+                                                                 dMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMm                                                                    
+                                                                 dMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMm                                                                    
+                                                                 dMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMm                                                                    
+                                                                 dMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMm                                                                    
+                                                       -sssssssssmMMMMMMMMm+++++++++mMMMMMMMMMMMMMMMMMMMMMMMMMMMm+++++++++dMMMMMMMMNsssssssss-                                                          
+                                                       /MMMMMMMMMMMMMMMMMMh         hMMMMMMMMMMMMMMMMMMMMMMMMMMMd         yMMMMMMMMMMMMMMMMMM+                                                          
+                                                       /MMMMMMMMMMMMMMMMMMh         hMMMMMMMMMMMMMMMMMMMMMMMMMMMd         yMMMMMMMMMMMMMMMMMM+                                                          
+                                                       /MMMMMMMMMMMMMMMMMMh         hMMMMMMMMMMMMMMMMMMMMMMMMMMMd         yMMMMMMMMMMMMMMMMMM+                                                          
+                                                       /MMMMMMMMMMMMMMMMMMh         hMMMMMMMMMMMMMMMMMMMMMMMMMMMd         yMMMMMMMMMMMMMMMMMM+                                                          
+                                              ymmmmmmmmNMMMMMMMMMMMMMMMMMMNmmmmmmmmmNMMMMMMMMMMMMMMMMMMMMMMMMMMMMmmmmmmmmmNMMMMMMMMMMMMMMMMMMNmmmmmmmmh                                                 
+                                              dMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMm                                                 
+                                              dMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMm                                                 
+                                              dMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMm                                                 
+                                              dMMMMMMMMNmmmmmmmmmMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMmmmmmmmmmNMMMMMMMMm                                                 
+                                              dMMMMMMMMy         dMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMm         sMMMMMMMMm                                                 
+                                              dMMMMMMMMy         dMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMm         sMMMMMMMMm                                                 
+                                              dMMMMMMMMy         dMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMm         sMMMMMMMMm                                                 
+                                              dMMMMMMMMy         dMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMm         sMMMMMMMMm                                                 
+                                              dMMMMMMMMy         dMMMMMMMMmsssssssssssssssssssssssssssssssssssssssssssssssmMMMMMMMMm         sMMMMMMMMm                                                 
+                                              dMMMMMMMMy         dMMMMMMMMh                                               yMMMMMMMMm         sMMMMMMMMm                                                 
+                                              dMMMMMMMMy         dMMMMMMMMh                                               yMMMMMMMMm         sMMMMMMMMm                                                 
+                                              dMMMMMMMMy         dMMMMMMMMh                                               yMMMMMMMMm         sMMMMMMMMm                                                 
+                                              dMMMMMMMMy         dMMMMMMMMh                                               yMMMMMMMMm         sMMMMMMMMm                                                 
+                                              -::::::::-         -::::::::+hhhhhhhhhhhhhhhhhho         ohhhhhhhhhhhhhhhhhh+::::::::-         .:::::::::                                                 
+                                                                          :MMMMMMMMMMMMMMMMMMh         yMMMMMMMMMMMMMMMMMM/                                                                             
+                                                                          :MMMMMMMMMMMMMMMMMMh         yMMMMMMMMMMMMMMMMMM/                                                                             
+                                                                          :MMMMMMMMMMMMMMMMMMh         yMMMMMMMMMMMMMMMMMM/                                                                             
+                                                                          :MMMMMMMMMMMMMMMMMMh         yMMMMMMMMMMMMMMMMMM/                                                                             
+   
+*/
