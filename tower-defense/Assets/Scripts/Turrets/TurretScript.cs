@@ -24,7 +24,7 @@ public class TurretScript : MonoBehaviour
     private float fireContDown = 0f;
     public float range = 15f;
     public float rotateSpeed = 10f;
-    [SerializeField] public static int turretDamage = 1;
+    [SerializeField] public static int turretDamage = 1; // ik heb static weg gehaald
 
     [Space]
     [Header("Upgrades")]
@@ -45,17 +45,17 @@ public class TurretScript : MonoBehaviour
         float shortestDistance = Mathf.Infinity;
         GameObject nearestEnemy = null;
 
-        foreach(GameObject enemy in enemies)
+        foreach (GameObject enemy in enemies)
         {
             float distanceToEnemy = Vector3.Distance(transform.position, enemy.transform.position);
-            if(distanceToEnemy < shortestDistance)
+            if (distanceToEnemy < shortestDistance)
             {
                 shortestDistance = distanceToEnemy;
                 nearestEnemy = enemy;
             }
         }
 
-        if(nearestEnemy != null && shortestDistance <= range)
+        if (nearestEnemy != null && shortestDistance <= range)
         {
             target = nearestEnemy.transform;
         }
@@ -68,7 +68,7 @@ public class TurretScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(target == null)
+        if (target == null)
         {
             return;
         }
@@ -78,7 +78,7 @@ public class TurretScript : MonoBehaviour
         Vector3 rotation = Quaternion.Lerp(partToRotate.rotation, lookRotation, Time.deltaTime * rotateSpeed).eulerAngles;
         partToRotate.rotation = Quaternion.Euler(0f, rotation.y, 0f);
 
-        if(fireContDown <= 0)
+        if (fireContDown <= 0)
         {
             Shoot();
             fireContDown = 1f / fireRate;
@@ -93,7 +93,7 @@ public class TurretScript : MonoBehaviour
         Debug.Log("Shoot!");
         GameObject bulletGo = (GameObject)Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         BulletScript bullet = bulletGo.GetComponent<BulletScript>();
-        if(bullet != null)
+        if (bullet != null)
         {
             bullet.Seek(target);
         }
@@ -107,6 +107,13 @@ public class TurretScript : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, range);
     }
+
+
+
+
+
+
+
 
 
     private void OnMouseDown()
