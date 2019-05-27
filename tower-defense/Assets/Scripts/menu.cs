@@ -6,20 +6,47 @@ using UnityEngine.SceneManagement;
 
 public class menu : MonoBehaviour
 {
-    public void PlayMainGame()
+
+    /* TO DO LIST JORIS 
+    *  corotiens toeveogen  mee bezig
+    *  geluid op klik knop 
+    *  saettings maakewn
+    *  spawner af maaken */
+
+    public string sceneName;
+    public Animator trasitionAnim;
+
+
+
+    void Start()
     {
-        SceneManager.LoadScene("MAIN");
+        StartCoroutine(IdleStart());
     }
 
-    public void BackToMainGame()
+    IEnumerator IdleStart()
     {
-        SceneManager.LoadScene("menu");
+        yield return new WaitForSeconds(2.0f);
+        trasitionAnim.SetTrigger("IdleStart");
     }
 
 
+    public void LoadToBTN()
+    {
+        StartCoroutine(LoadScene());
+    }
 
+    
+    // zorgt ervoor de de scene pas geladen word na dat de anmim voor bij is.
+    IEnumerator LoadScene()
+    {
+        trasitionAnim.SetTrigger("end");
+        yield return new WaitForSeconds(2.0f);
+        SceneManager.LoadScene(sceneName);
+    }
 
-    public void QuitGame ()                                                                                                                                                                                 //hoi
+    
+
+    public void QuitGame ()       
     {
         Debug.Log("QUIT");
         Application.Quit();
