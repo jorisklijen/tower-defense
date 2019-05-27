@@ -8,10 +8,11 @@ public class menu : MonoBehaviour
 {
 
     /* TO DO LIST JORIS 
-    *  corotiens toeveogen  mee bezig
-    *  geluid op klik knop 
-    *  saettings maakewn
-    *  spawner af maaken */
+    *  settings maaken
+    *  spawner af maaken 
+    *  basis levens geven 
+    *  enemys damage laten doen 
+    */
 
     public string sceneName;
     public Animator trasitionAnim;
@@ -25,7 +26,7 @@ public class menu : MonoBehaviour
 
     IEnumerator IdleStart()
     {
-        yield return new WaitForSeconds(2.0f);
+        yield return new WaitForSeconds(1.5f);
         trasitionAnim.SetTrigger("IdleStart");
     }
 
@@ -40,7 +41,7 @@ public class menu : MonoBehaviour
     IEnumerator LoadScene()
     {
         trasitionAnim.SetTrigger("end");
-        yield return new WaitForSeconds(2.0f);
+        yield return new WaitForSeconds(1.5f);
         SceneManager.LoadScene(sceneName);
     }
 
