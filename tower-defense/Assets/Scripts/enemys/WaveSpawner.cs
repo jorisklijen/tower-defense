@@ -27,7 +27,13 @@ public class WaveSpawner : MonoBehaviour
 
     // Start is called before the first frame update
     void Start()
-    {
+    {   //geeft een error als een geen pleken zijn om te spawnen.
+        if (spawnPoints.Length == 0)
+        {
+            Debug.LogError("No spawn points referenced.");
+        }
+
+
         waveCountdown = timeBetweenWaves;
     }
 
@@ -117,7 +123,6 @@ public class WaveSpawner : MonoBehaviour
         Debug.Log("Spawning enemy" + _enemy.name);
         Transform _sp = spawnPoints[Random.Range(0, spawnPoints.Length)];
         Instantiate(_enemy, _sp.position, _sp.rotation);
-
     }
 
 

@@ -1,18 +1,20 @@
 ﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Audio;
 
 public class menu : MonoBehaviour
 {
-    /* TO DO LIST JORIS 
+    /* TO DO LIST 
     *  settings maaken
-    *  spawner af maaken 
     *  basis levens geven 
     *  enemys damage laten doen 
     */
 
     public string sceneName;
     public Animator trasitionAnim;
+
+    public AudioMixer audioMixer;
 
 
     //niet helemaal netjese maar de eerste anim n wilde niet stoppen met afspeel dus heb t zo maar ge fixt :)
@@ -42,18 +44,28 @@ public class menu : MonoBehaviour
 
 
     
+
+    // hier zijn de aoudi sliders van maste, muziek en sfx.
+    public void SetMasterVolume (float masterVolume)
+    {
+        audioMixer.SetFloat("MasterVolume", masterVolume);
+    }
+    public void SetMuziekVolume(float muziekVolume)
+    {
+        audioMixer.SetFloat("MusicVolume", muziekVolume);
+    }
+    public void SetSFXVolume(float sfxVolume)
+    {
+        audioMixer.SetFloat("SFXVolume", sfxVolume);
+    }
+
+
+
+
     // sluit het spel af
     public void QuitGame ()       
     {
         Debug.Log("QUIT");
         Application.Quit();
     }
-
-
-
-
-
-
-
-
 }
