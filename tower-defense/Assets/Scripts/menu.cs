@@ -1,12 +1,9 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class menu : MonoBehaviour
 {
-
     /* TO DO LIST JORIS 
     *  settings maaken
     *  spawner af maaken 
@@ -18,12 +15,11 @@ public class menu : MonoBehaviour
     public Animator trasitionAnim;
 
 
-
+    //niet helemaal netjese maar de eerste anim n wilde niet stoppen met afspeel dus heb t zo maar ge fixt :)
     void Start()
     {
         StartCoroutine(IdleStart());
     }
-
     IEnumerator IdleStart()
     {
         yield return new WaitForSeconds(1.5f);
@@ -31,13 +27,12 @@ public class menu : MonoBehaviour
     }
 
 
+
+    // zorgt ervoor de de scene pas geladen word na dat de anmim voor bij is.
     public void LoadToBTN()
     {
         StartCoroutine(LoadScene());
     }
-
-    
-    // zorgt ervoor de de scene pas geladen word na dat de anmim voor bij is.
     IEnumerator LoadScene()
     {
         trasitionAnim.SetTrigger("end");
@@ -45,8 +40,9 @@ public class menu : MonoBehaviour
         SceneManager.LoadScene(sceneName);
     }
 
-    
 
+    
+    // sluit het spel af
     public void QuitGame ()       
     {
         Debug.Log("QUIT");
