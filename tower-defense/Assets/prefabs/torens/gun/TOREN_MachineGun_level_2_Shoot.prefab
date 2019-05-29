@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 79035993239872795}
   - component: {fileID: 7332383208932197860}
+  - component: {fileID: 707171578544986295}
   m_Layer: 0
   m_Name: TOREN_MachineGun_level_2_Shoot
   m_TagString: Untagged
@@ -60,6 +61,19 @@ MonoBehaviour:
   upgradeCosts: 0
   nextTierTurret: {fileID: 5056841637414792988, guid: b9e36898ce444ce4fafc4b8c47b3b119,
     type: 3}
+--- !u!65 &707171578544986295
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 79035993239872794}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.2, y: 1.2, z: 1.2}
+  m_Center: {x: 0, y: 0.51, z: 0}
 --- !u!1 &292610575966551494
 GameObject:
   m_ObjectHideFlags: 0

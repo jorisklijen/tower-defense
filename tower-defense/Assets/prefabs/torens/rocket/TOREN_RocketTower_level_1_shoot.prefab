@@ -72,6 +72,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6426991313019088158}
   - component: {fileID: 1635235194160710113}
+  - component: {fileID: 1753870791094445855}
   m_Layer: 0
   m_Name: TOREN_RocketTower_level_1_shoot
   m_TagString: Untagged
@@ -112,9 +113,27 @@ MonoBehaviour:
   bulletPrefab: {fileID: 6755869784675539864, guid: e215ed822330e724fabba99765c8b46a,
     type: 3}
   firePoint: {fileID: 7180296227622509928}
+  muzzleFlash: {fileID: 0}
+  GunAudioSource: {fileID: 0}
   fireRate: 0.25
   range: 60
   rotateSpeed: 10
+  upgradeCosts: 0
+  nextTierTurret: {fileID: 1667980726212670646, guid: 60eba88b04e0aad4c9191d45ced176b7,
+    type: 3}
+--- !u!65 &1753870791094445855
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6426991313019088145}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1.78, z: 1}
+  m_Center: {x: 0, y: 0.75, z: 0}
 --- !u!1001 &6426991313209323874
 PrefabInstance:
   m_ObjectHideFlags: 0
