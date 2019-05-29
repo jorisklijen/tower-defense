@@ -57,7 +57,8 @@ MonoBehaviour:
   fireRate: 20
   range: 80
   rotateSpeed: 20
-  turretDamage: 3
+  upgradeCosts: 0
+  nextTierTurret: {fileID: 5056841637414792988}
 --- !u!1 &6076196202942743520
 GameObject:
   m_ObjectHideFlags: 0

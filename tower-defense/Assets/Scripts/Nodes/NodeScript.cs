@@ -15,6 +15,8 @@ public class NodeScript : MonoBehaviour
 
     private Renderer rend;
 
+    private bool isBuildOn;
+
     private void Start()
     {
         rend = GetComponent<Renderer>();
@@ -25,8 +27,9 @@ public class NodeScript : MonoBehaviour
     {
         //build a turret
         if(turret != null) Debug.Log("Can't build here");
-        if (turret == null)
+        if (isBuildOn == false)
         {
+            isBuildOn = true;
             GameObject turretToBuild = BuildManager.instance.GetBuildTurretToBuild();
             turret = (GameObject)Instantiate(turretToBuild, transform.position + offset, transform.rotation);
             turretPlacementSource.Play();
@@ -35,7 +38,7 @@ public class NodeScript : MonoBehaviour
 
     private void OnMouseEnter()
     {
-        if (turret != null)
+        if (isBuildOn == true)
         {
             rend.material = occupiedColor;
             return;
