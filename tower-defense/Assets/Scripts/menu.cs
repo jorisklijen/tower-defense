@@ -6,7 +6,6 @@ using UnityEngine.Audio;
 public class menu : MonoBehaviour
 {
     /* TO DO LIST 
-    *  settings maaken
     *  basis levens geven 
     *  enemys damage laten doen 
     */
@@ -24,7 +23,7 @@ public class menu : MonoBehaviour
     }
     IEnumerator IdleStart()
     {
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(1.51f);
         trasitionAnim.SetTrigger("IdleStart");
     }
 
