@@ -58,9 +58,13 @@ MonoBehaviour:
   fireRate: 10
   range: 60
   rotateSpeed: 15
-  upgradeCosts: 0
+  upgradeCostsText: {fileID: 8232040067590558728, guid: e386b7fef03f6544bb7d6ec7d38cbcbb,
+    type: 3}
+  noMoney: {fileID: 8436378077849528821, guid: 159d6e6c3b064fd4eaf87a425adc389f, type: 3}
+  upgradeCosts: 100
   nextTierTurret: {fileID: 5056841637414792988, guid: b9e36898ce444ce4fafc4b8c47b3b119,
     type: 3}
+  notUpgradeMessage: Sorry, not enough money!
 --- !u!65 &707171578544986295
 BoxCollider:
   m_ObjectHideFlags: 0

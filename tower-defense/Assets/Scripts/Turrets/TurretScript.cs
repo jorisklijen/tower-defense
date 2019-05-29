@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.UI;
 
 public class TurretScript : MonoBehaviour
 {
@@ -28,9 +29,11 @@ public class TurretScript : MonoBehaviour
 
     [Space]
     [Header("Upgrades")]
-
-    public int upgradeCosts;
+    public Text upgradeCostsText;
+    public Text noMoney;
+    public float upgradeCosts;
     public GameObject nextTierTurret;
+    public string notUpgradeMessage;
 
     // Start is called before the first frame update
     void Start()
@@ -108,17 +111,29 @@ public class TurretScript : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, range);
     }
 
+    private void OnMouseEnter()
+    {
+        upgradeCostsText.text = "Upgrade Costs: €" + upgradeCosts;
+    }
 
-
-
-
-
+    private void OnMouseExit()
+    {
+        upgradeCostsText.text = "";
+    }
 
 
 
     private void OnMouseDown()
     {
-        Instantiate(nextTierTurret, transform.position, transform.rotation);
-        Destroy(gameObject);
+        BuildManager b = new BuildManager();
+        if (b.money >= 0)
+        {
+            Instantiate(nextTierTurret, transform.position, transform.rotation);
+            Destroy(gameObject);
+        }
+        else
+        {
+            noMoney.text = notUpgradeMessage;
+        }
     }
 }

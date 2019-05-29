@@ -85,8 +85,12 @@ MonoBehaviour:
   fireRate: 1
   range: 90
   rotateSpeed: 20
+  upgradeCostsText: {fileID: 8232040067590558728, guid: e386b7fef03f6544bb7d6ec7d38cbcbb,
+    type: 3}
+  noMoney: {fileID: 8436378077849528821, guid: 159d6e6c3b064fd4eaf87a425adc389f, type: 3}
   upgradeCosts: 0
   nextTierTurret: {fileID: 6340795141557394774}
+  notUpgradeMessage: Turret is max tier
 --- !u!1 &7164126266119731647
 GameObject:
   m_ObjectHideFlags: 0

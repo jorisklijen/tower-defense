@@ -50,9 +50,17 @@ MonoBehaviour:
   bulletPrefab: {fileID: 6755869784675539864, guid: e215ed822330e724fabba99765c8b46a,
     type: 3}
   firePoint: {fileID: 3753021983303088987}
+  muzzleFlash: {fileID: 0}
+  GunAudioSource: {fileID: 0}
   fireRate: 0.5
   range: 75
   rotateSpeed: 15
+  upgradeCostsText: {fileID: 8232040067590558728, guid: e386b7fef03f6544bb7d6ec7d38cbcbb,
+    type: 3}
+  noMoney: {fileID: 8436378077849528821, guid: 159d6e6c3b064fd4eaf87a425adc389f, type: 3}
+  upgradeCosts: 0
+  nextTierTurret: {fileID: 0}
+  notUpgradeMessage: Sorry, not enough money!
 --- !u!1 &4043421006061445534
 GameObject:
   m_ObjectHideFlags: 0
