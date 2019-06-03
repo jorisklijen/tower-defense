@@ -57,6 +57,7 @@ GameObject:
   - component: {fileID: 6706673559601398982}
   - component: {fileID: 6211810630673807946}
   - component: {fileID: 8225119559325944209}
+  - component: {fileID: -7432214508926162990}
   m_Layer: 0
   m_Name: TOREN_MachineGun_level_1_Shoot
   m_TagString: Untagged
@@ -104,9 +105,9 @@ MonoBehaviour:
   fireRate: 5
   range: 40
   rotateSpeed: 12
-  upgradeCosts: 0
-  nextTierTurret: {fileID: 79035993239872794, guid: c9b7ac77c4b648b4b95b14b5832eedc4,
-    type: 3}
+  isUsingLazer: 0
+  linerenderer: {fileID: 0}
+  impactEffect: {fileID: 0}
 --- !u!65 &8225119559325944209
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -120,6 +121,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.2, y: 1.2, z: 1.2}
   m_Center: {x: 0, y: 0.64, z: 0}
+--- !u!114 &-7432214508926162990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6706673559601398983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff396882501c2eb4cb05d4e04bae3f54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextTierTurret: {fileID: 79035993239872794, guid: c9b7ac77c4b648b4b95b14b5832eedc4,
+    type: 3}
 --- !u!1 &7687070833444201959
 GameObject:
   m_ObjectHideFlags: 0
